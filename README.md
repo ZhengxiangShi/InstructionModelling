@@ -24,13 +24,14 @@ This repository provides the code for our paper titled **[Instruction Tuning Wit
   - [3. Evaluation](#3-evaluation)
   - [4. Reproducing Analysis](#4-reproducing-analysis)
   - [Bugs or questions?](#bugs-or-questions)
+  - [Citation](#citation)
   - [Acknowledgements](#acknowledgements)
 
 ## Overview
 You can reproduce the experiments of our paper [Instruction Tuning With Loss Over Instructions]().
 
 > **Abstract**
-> Instruction tuning plays a crucial role in shaping the outputs of language models (LMs) to desired styles. In this work, we propose a simple yet effective method, Instruction Modelling (IM), which trains LMs by applying a loss function to the instruction and prompt part rather than solely to the output part. Through experiments across various 21 benchmarks, we find that IM can effectively improve the LM performance on both NLP tasks (e.g., MMLU, TruthfulQA, and HumanEval) and open-ended generation benchmarks (e.g., MT-Bench and AlpacaEval), especially under the Superficial Alignment Hypothesis where a small amount of training examples are used for instruction tuning. Remarkably, in the most advantageous case, our proposed method boosts performance on AlpacaEval 1.0 by over 100%.
+> Instruction tuning plays a crucial role in shaping the outputs of language models (LMs) to desired styles. In this work, we propose a simple yet effective method, Instruction Modelling (IM), which trains LMs by applying a loss function to the instruction and prompt part rather than solely to the output part. Through experiments across 21 diverse benchmarks, we show that, in many scenarios, IM can effectively improve the LM performance on both NLP tasks (e.g., MMLU, TruthfulQA, and HumanEval) and open-ended generation benchmarks (e.g., MT-Bench and AlpacaEval). Remarkably, in the most advantageous case, IM boosts model performance on AlpacaEval 1.0 by over 100%. We identify two key factors influencing the effectiveness of IM: (1) The ratio between instruction length and output length in the training data; and (2) The number of training examples. We observe that IM is especially beneficial when trained on datasets with lengthy instructions paired with brief outputs, or under the Superficial Alignment Hypothesis (SAH) where a small amount of training examples are used for instruction tuning. Further analysis substantiates our hypothesis that the improvement can be attributed to reduced overfitting to instruction tuning datasets. Our work provides practical guidance for instruction tuning LMs, especially in low-resource scenarios. 
 > 
 
 ## 1. Requirements and Installation
@@ -337,7 +338,17 @@ done
 ```
 
 ## Bugs or questions?
-If you have any questions regarding the code or the paper, please feel free to reach out to Authors at `placeholder@xx.xx.xxx`.  If you experience any difficulties while using the code or need to report a bug, feel free to open an issue. We kindly ask that you provide detailed information about the problem to help us provide effective support.
+If you have any questions regarding the code or the paper, please feel free to reach out to Authors at `zhengxiang.shi.19@ucl.ac.uk`.  If you experience any difficulties while using the code or need to report a bug, feel free to open an issue. We kindly ask that you provide detailed information about the problem to help us provide effective support.
+
+## Citation
+```
+@article{shi2024instruction,
+title={Instruction Tuning With Loss Over Instructions},
+author={Zhengyan Shi and Adam X. Yang and Bin Wu and Laurence Aitchison and Emine Yilmaz and Aldo Lipani},
+booktitle={ArXiv},
+year={2024},
+}
+```
 
 ## Acknowledgements
 We would like to thank the authors of the following repositories for providing the codebase:
